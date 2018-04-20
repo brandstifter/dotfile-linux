@@ -3,6 +3,8 @@
 install: install-init-nvim
 
 install-init-nvim:
+	mkdir -p ~/.vim/backup
+	mkdir -p ~/.vim/swp
 	mkdir -p ~/.config/nvim/
 	ln -s ~/etc/init.vim ~/.config/nvim/init.vim
 

@@ -78,8 +78,8 @@ syntax enable
 "set nobackup
 "set noswapfile
 
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swp/
 
 set tabstop=4       	" The width of a TAB is set to 4. Still it is a \t.
 						" It is just that Vim will interpret it to be having
@@ -99,9 +99,6 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-
-let g:python3_host_prog = '/Users/tb/anaconda/bin/python3'
 
 
 " More natural splits
@@ -148,6 +145,9 @@ colorscheme molokai
 "  Code Completion
 " ----------------------------------------------------------------------------=
 
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
+
 let g:deoplete#enable_at_startup = 1
 
 let g:neosnippet#enable_completed_snippet = 1
@@ -185,6 +185,21 @@ nnoremap <silent> <leader>b :BufExplorer<cr>
 " -----------------------------------------------------------------------------
 "  Functions
 " -----------------------------------------------------------------------------
+
+
+" ----------------------------------------------------------------------------=
+"  Bug fixes
+" ----------------------------------------------------------------------------=
+
+
+" Neovim tries to be clever and changes the style of your cursor depending on the mode you're in. Not all terminal emulators support that, but those which don't, should simply ignore it.
+
+" The terminal emulator does not ignore it and prints it to the screen (it thinks of it as normal characters).
+
+" This tells Neovim not to try changing the cursor style.
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+
 
 
 
