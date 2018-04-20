@@ -11,9 +11,17 @@ install-init-nvim:
 install-xinitrc:
 	ln -s ~/etc/xinitrc ~/.xinitrc
 
+install-xmodemap:
+	ln -s ~/etc/xmodmap.conf ~/.xmodmap
+
 load-keymap:
 	xmodmap xmodmap.conf
 
 create-default-keymap:
 	xmodmap -pke > xmodmap.default.conf
+
+
+install-zshrc:
+	ln -s ~/etc/zshrc ~/.zshrc
+
 
