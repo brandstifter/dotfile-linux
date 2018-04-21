@@ -6,13 +6,14 @@ install-init-nvim:
 	mkdir -p ~/.vim/backup
 	mkdir -p ~/.vim/swp
 	mkdir -p ~/.config/nvim/
-	ln -s ~/etc/init.vim ~/.config/nvim/init.vim
+	ln -s -f ~/etc/init.vim ~/.config/nvim/init.vim
 
 install-xinitrc:
-	ln -s ~/etc/xinitrc ~/.xinitrc
+	ln -s -f  ~/etc/xinitrc ~/.xinitrc
 
 install-xmodemap:
-	ln -s ~/etc/xmodmap.conf ~/.xmodmap
+	ln -s -f ~/etc/xmodmap.conf ~/.xmodmap
+	ln -s -f ~/etc/xmodmap.conf /opt/etc
 
 load-keymap:
 	xmodmap xmodmap.conf
@@ -22,6 +23,6 @@ create-default-keymap:
 
 
 install-zshrc:
-	ln -s ~/etc/zshrc ~/.zshrc
+	ln -s -f ~/etc/zshrc ~/.zshrc
 
 
