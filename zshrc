@@ -13,6 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export PATH="$PATH:$HOME/bin:/opt/clion-2018.1.1/bin"
+export PATH="$PATH:$HOME/bin:/opt/bin:/opt/clion-2018.1.1/bin"
+
  
 export VTE_VERSION="100"

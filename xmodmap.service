@@ -1,0 +1,12 @@
+
+
+
+
+[Service]
+/opt/bin/load_modkeymap.sh
+
+[Install]
+WantedBy=default.target
+
+
+
